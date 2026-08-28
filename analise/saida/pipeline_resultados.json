@@ -1,0 +1,30 @@
+{
+  "hash_dataset_antes": {
+    "Details_Itapema.csv": "3688ba1d8e576fb7",
+    "Hosts_ids_Itapema.csv": "b043ffea58b6f9b5",
+    "Mesh_Ids_Data_Itapema.csv": "f5064eec7fbfa7a9",
+    "Price_AV_Itapema.csv": "b0b5c8c07011daf5",
+    "VivaReal_Itapema.csv": "c720320ae6bcd349"
+  },
+  "n_prioritarias": 7,
+  "n_nao_prioritarias": 10,
+  "n_insuficientes": 0,
+  "n_inconclusivas": 167,
+  "n_candidatos_s2": 98,
+  "arquivos": {
+    "s1": "C:\\Users\\maria\\OneDrive\\Área de Trabalho\\hackathon\\jovens-talentos-2026-hackathon-data\\analise\\saida\\s1_segmentos.csv",
+    "s1_inconclusivas": "C:\\Users\\maria\\OneDrive\\Área de Trabalho\\hackathon\\jovens-talentos-2026-hackathon-data\\analise\\saida\\s1_inconclusivas.csv",
+    "s2": "C:\\Users\\maria\\OneDrive\\Área de Trabalho\\hackathon\\jovens-talentos-2026-hackathon-data\\analise\\saida\\s2_candidatos.csv"
+  },
+  "confianca": {
+    "periodo": "2025-01-06 a 2025-04-20",
+    "sem_ocupacao": true,
+    "sem_receita": true,
+    "sem_roi": true,
+    "sem_matching_individual_airbnb_vivareal": true,
+    "preco_anunciado_nao_receita": true,
+    "n_ai_global": 999,
+    "total_airbnb": 4441,
+    "ofensores_de_qualidade": 167
+  }
+}

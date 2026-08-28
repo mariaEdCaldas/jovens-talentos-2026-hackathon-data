@@ -1,0 +1,168 @@
+﻿bairro_tipo_quartos,bairro,tipo,quartos,nivel,status,motivo,R,R_ic_lo,R_ic_hi,half,n_ai,n_vi_total,n_vi_com_sale_price,cobertura_price_pct,origin
+alto sao bento|apartamento|1,alto sao bento,apartamento,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,2,0,0,40.0,nao_elegivel
+alto sao bento|apartamento|2,alto sao bento,apartamento,2,n/a,inconclusiva,volume_ai,,,,,1,31,31,4.761904761904762,nao_elegivel
+alto sao bento|apartamento|3,alto sao bento,apartamento,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+alto sao bento|apartamento|4+,alto sao bento,apartamento,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+alto sao bento|casa|1,alto sao bento,casa,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,1,0,0,33.33333333333333,nao_elegivel
+alto sao bento|casa|2,alto sao bento,casa,2,n/a,inconclusiva,volume_ai,,,,,0,10,10,0.0,nao_elegivel
+alto sao bento|casa|3,alto sao bento,casa,3,n/a,inconclusiva,volume_ai,,,,,0,5,5,0.0,nao_elegivel
+alto sao bento|casa|4+,alto sao bento,casa,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,1,1,1,100.0,nao_elegivel
+alto sao bento|outros|1,alto sao bento,outros,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+alto sao bento|outros|2,alto sao bento,outros,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+alto sao bento|outros|3,alto sao bento,outros,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+alto sao bento|outros|4+,alto sao bento,outros,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+areal|apartamento|1,areal,apartamento,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+areal|apartamento|2,areal,apartamento,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+areal|apartamento|3,areal,apartamento,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+areal|apartamento|4+,areal,apartamento,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+areal|casa|1,areal,casa,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,1,0,0,50.0,nao_elegivel
+areal|casa|2,areal,casa,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+areal|casa|3,areal,casa,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+areal|casa|4+,areal,casa,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+areal|outros|1,areal,outros,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+areal|outros|2,areal,outros,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+areal|outros|3,areal,outros,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+areal|outros|4+,areal,outros,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+canto da praia|apartamento|1,canto da praia,apartamento,1,n/a,inconclusiva,volume_ai,,,,,0,7,7,0.0,nao_elegivel
+canto da praia|apartamento|2,canto da praia,apartamento,2,n/a,inconclusiva,volume_ai,,,,,4,12,12,57.14285714285714,nao_elegivel
+canto da praia|apartamento|3,canto da praia,apartamento,3,n/a,inconclusiva,volume_ai,,,,,1,64,64,100.0,nao_elegivel
+canto da praia|apartamento|4+,canto da praia,apartamento,4+,n/a,inconclusiva,volume_ai,,,,,0,10,10,,nao_elegivel
+canto da praia|casa|1,canto da praia,casa,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,1,0,0,25.0,nao_elegivel
+canto da praia|casa|2,canto da praia,casa,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+canto da praia|casa|3,canto da praia,casa,3,n/a,inconclusiva,volume_ai,,,,,2,16,16,28.57142857142857,nao_elegivel
+canto da praia|casa|4+,canto da praia,casa,4+,n/a,inconclusiva,volume_ai,,,,,1,11,11,25.0,nao_elegivel
+canto da praia|outros|1,canto da praia,outros,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+canto da praia|outros|2,canto da praia,outros,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+canto da praia|outros|3,canto da praia,outros,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+canto da praia|outros|4+,canto da praia,outros,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+casa branca|apartamento|1,casa branca,apartamento,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+casa branca|apartamento|3,casa branca,apartamento,3,n/a,inconclusiva,volume_ai,,,,,2,7,7,40.0,nao_elegivel
+casa branca|apartamento|4+,casa branca,apartamento,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+casa branca|casa|1,casa branca,casa,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,2,0,0,40.0,nao_elegivel
+casa branca|casa|2,casa branca,casa,2,n/a,inconclusiva,volume_ai,,,,,0,5,5,0.0,nao_elegivel
+casa branca|casa|3,casa branca,casa,3,n/a,inconclusiva,volume_ai,,,,,0,19,19,0.0,nao_elegivel
+casa branca|casa|4+,casa branca,casa,4+,n/a,inconclusiva,volume_ai,,,,,0,14,14,,nao_elegivel
+casa branca|outros|1,casa branca,outros,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+casa branca|outros|2,casa branca,outros,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,1,1,,nao_elegivel
+casa branca|outros|3,casa branca,outros,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,1,1,,nao_elegivel
+casa branca|outros|4+,casa branca,outros,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,1,1,,nao_elegivel
+centro|casa|1,centro,casa,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,1,0,0,7.6923076923076925,nao_elegivel
+centro|casa|2,centro,casa,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,2,3,3,12.5,nao_elegivel
+centro|casa|3,centro,casa,3,n/a,inconclusiva,volume_ai,,,,,2,5,5,8.333333333333332,nao_elegivel
+centro|casa|4+,centro,casa,4+,n/a,inconclusiva,volume_ai,,,,,4,9,9,44.44444444444444,nao_elegivel
+centro|outros|1,centro,outros,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,3,3,3,8.333333333333332,nao_elegivel
+centro|outros|2,centro,outros,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+centro|outros|3,centro,outros,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+centro|outros|4+,centro,outros,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,2,2,,nao_elegivel
+ilhota|apartamento|1,ilhota,apartamento,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,2,1,1,33.33333333333333,nao_elegivel
+ilhota|apartamento|2,ilhota,apartamento,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,2,0,0,25.0,nao_elegivel
+ilhota|apartamento|3,ilhota,apartamento,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,1,3,3,14.285714285714285,nao_elegivel
+ilhota|apartamento|4+,ilhota,apartamento,4+,n/a,inconclusiva,volume_ai,,,,,0,10,10,,nao_elegivel
+ilhota|casa|1,ilhota,casa,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+ilhota|casa|2,ilhota,casa,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,2,1,1,25.0,nao_elegivel
+ilhota|casa|3,ilhota,casa,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,2,2,2,28.57142857142857,nao_elegivel
+ilhota|casa|4+,ilhota,casa,4+,n/a,inconclusiva,volume_ai,,,,,1,17,17,20.0,nao_elegivel
+ilhota|outros|1,ilhota,outros,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+ilhota|outros|2,ilhota,outros,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+ilhota|outros|3,ilhota,outros,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+ilhota|outros|4+,ilhota,outros,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+jardim praiamar|apartamento|1,jardim praiamar,apartamento,1,n/a,inconclusiva,volume_ai,,,,,0,6,6,0.0,nao_elegivel
+jardim praiamar|apartamento|2,jardim praiamar,apartamento,2,n/a,inconclusiva,volume_ai,,,,,0,82,82,0.0,nao_elegivel
+jardim praiamar|apartamento|3,jardim praiamar,apartamento,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,4,4,,nao_elegivel
+jardim praiamar|apartamento|4+,jardim praiamar,apartamento,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,1,1,,nao_elegivel
+jardim praiamar|casa|1,jardim praiamar,casa,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,1,0,0,100.0,nao_elegivel
+jardim praiamar|casa|2,jardim praiamar,casa,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+jardim praiamar|casa|3,jardim praiamar,casa,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+jardim praiamar|casa|4+,jardim praiamar,casa,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+jardim praiamar|outros|1,jardim praiamar,outros,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+jardim praiamar|outros|2,jardim praiamar,outros,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+jardim praiamar|outros|3,jardim praiamar,outros,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+jardim praiamar|outros|4+,jardim praiamar,outros,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+lameiro|apartamento|1,lameiro,apartamento,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+lameiro|apartamento|2,lameiro,apartamento,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+lameiro|apartamento|3,lameiro,apartamento,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+lameiro|apartamento|4+,lameiro,apartamento,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+lameiro|casa|1,lameiro,casa,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+lameiro|casa|2,lameiro,casa,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+lameiro|casa|3,lameiro,casa,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+lameiro|casa|4+,lameiro,casa,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+lameiro|outros|1,lameiro,outros,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+lameiro|outros|2,lameiro,outros,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+lameiro|outros|3,lameiro,outros,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+lameiro|outros|4+,lameiro,outros,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+leopoldo zarling|apartamento|1,leopoldo zarling,apartamento,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+leopoldo zarling|apartamento|2,leopoldo zarling,apartamento,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+leopoldo zarling|apartamento|3,leopoldo zarling,apartamento,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+leopoldo zarling|apartamento|4+,leopoldo zarling,apartamento,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+leopoldo zarling|casa|1,leopoldo zarling,casa,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,1,0,0,25.0,nao_elegivel
+leopoldo zarling|casa|2,leopoldo zarling,casa,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+leopoldo zarling|casa|3,leopoldo zarling,casa,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+leopoldo zarling|casa|4+,leopoldo zarling,casa,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+leopoldo zarling|outros|1,leopoldo zarling,outros,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+leopoldo zarling|outros|2,leopoldo zarling,outros,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+leopoldo zarling|outros|3,leopoldo zarling,outros,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+leopoldo zarling|outros|4+,leopoldo zarling,outros,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+meia praia|casa|1,meia praia,casa,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,1,0,0,14.285714285714285,nao_elegivel
+meia praia|casa|2,meia praia,casa,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,3,0,0,16.666666666666664,nao_elegivel
+meia praia|casa|4+,meia praia,casa,4+,n/a,inconclusiva,volume_ai,,,,,3,8,8,15.0,nao_elegivel
+meia praia|outros|1,meia praia,outros,1,n/a,inconclusiva,volume_vi,,,,,12,2,2,9.375,nao_elegivel
+meia praia|outros|2,meia praia,outros,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,1,0,0,4.545454545454546,nao_elegivel
+meia praia|outros|3,meia praia,outros,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+meia praia|outros|4+,meia praia,outros,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+morretes|apartamento|1,morretes,apartamento,1,n/a,inconclusiva,volume_ai,,,,,4,46,46,30.76923076923077,nao_elegivel
+morretes|apartamento|4+,morretes,apartamento,4+,n/a,inconclusiva,volume_ai,,,,,3,39,39,23.076923076923077,nao_elegivel
+morretes|casa|1,morretes,casa,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,2,0,0,11.76470588235294,nao_elegivel
+morretes|casa|2,morretes,casa,2,n/a,inconclusiva,precisao,,,,,9,196,196,22.5,nao_elegivel
+morretes|casa|3,morretes,casa,3,n/a,inconclusiva,volume_ai,,,,,1,151,151,3.4482758620689653,nao_elegivel
+morretes|casa|4+,morretes,casa,4+,n/a,inconclusiva,volume_ai,,,,,2,11,11,16.666666666666664,nao_elegivel
+morretes|outros|1,morretes,outros,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,1,1,1,5.263157894736842,nao_elegivel
+morretes|outros|2,morretes,outros,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,1,1,0.0,nao_elegivel
+morretes|outros|3,morretes,outros,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+morretes|outros|4+,morretes,outros,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,1,1,,nao_elegivel
+sertao do trombudo|apartamento|1,sertao do trombudo,apartamento,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,2,2,,nao_elegivel
+sertao do trombudo|apartamento|2,sertao do trombudo,apartamento,2,n/a,inconclusiva,volume_ai,,,,,0,7,7,,nao_elegivel
+sertao do trombudo|apartamento|3,sertao do trombudo,apartamento,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,2,2,,nao_elegivel
+sertao do trombudo|apartamento|4+,sertao do trombudo,apartamento,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+sertao do trombudo|casa|1,sertao do trombudo,casa,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,2,1,1,33.33333333333333,nao_elegivel
+sertao do trombudo|casa|2,sertao do trombudo,casa,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,4,4,0.0,nao_elegivel
+sertao do trombudo|casa|3,sertao do trombudo,casa,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,1,1,0.0,nao_elegivel
+sertao do trombudo|casa|4+,sertao do trombudo,casa,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,1,2,2,50.0,nao_elegivel
+sertao do trombudo|outros|1,sertao do trombudo,outros,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,1,1,0.0,nao_elegivel
+sertao do trombudo|outros|2,sertao do trombudo,outros,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,1,1,,nao_elegivel
+sertao do trombudo|outros|3,sertao do trombudo,outros,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+sertao do trombudo|outros|4+,sertao do trombudo,outros,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,1,1,,nao_elegivel
+sertaozinho|apartamento|1,sertaozinho,apartamento,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+sertaozinho|apartamento|2,sertaozinho,apartamento,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+sertaozinho|apartamento|3,sertaozinho,apartamento,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+sertaozinho|apartamento|4+,sertaozinho,apartamento,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+sertaozinho|casa|1,sertaozinho,casa,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,2,0,0,50.0,nao_elegivel
+sertaozinho|casa|2,sertaozinho,casa,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,1,0,0,33.33333333333333,nao_elegivel
+sertaozinho|casa|3,sertaozinho,casa,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,1,0,0,33.33333333333333,nao_elegivel
+sertaozinho|casa|4+,sertaozinho,casa,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,2,0,0,100.0,nao_elegivel
+sertaozinho|outros|1,sertaozinho,outros,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+sertaozinho|outros|2,sertaozinho,outros,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+sertaozinho|outros|3,sertaozinho,outros,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+sertaozinho|outros|4+,sertaozinho,outros,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+tabuleiro dos oliveiras|apartamento|1,tabuleiro dos oliveiras,apartamento,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,3,3,0.0,nao_elegivel
+tabuleiro dos oliveiras|apartamento|3,tabuleiro dos oliveiras,apartamento,3,n/a,inconclusiva,volume_ai,,,,,4,13,13,21.052631578947366,nao_elegivel
+tabuleiro dos oliveiras|apartamento|4+,tabuleiro dos oliveiras,apartamento,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,1,1,1,100.0,nao_elegivel
+tabuleiro dos oliveiras|casa|1,tabuleiro dos oliveiras,casa,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+tabuleiro dos oliveiras|casa|2,tabuleiro dos oliveiras,casa,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,1,1,0.0,nao_elegivel
+tabuleiro dos oliveiras|casa|3,tabuleiro dos oliveiras,casa,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,3,3,0.0,nao_elegivel
+tabuleiro dos oliveiras|casa|4+,tabuleiro dos oliveiras,casa,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,2,1,1,66.66666666666666,nao_elegivel
+tabuleiro dos oliveiras|outros|1,tabuleiro dos oliveiras,outros,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,1,0,0,20.0,nao_elegivel
+tabuleiro dos oliveiras|outros|2,tabuleiro dos oliveiras,outros,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+tabuleiro dos oliveiras|outros|3,tabuleiro dos oliveiras,outros,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+tabuleiro dos oliveiras|outros|4+,tabuleiro dos oliveiras,outros,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+varzea|apartamento|1,varzea,apartamento,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+varzea|apartamento|2,varzea,apartamento,2,n/a,inconclusiva,volume_ai,,,,,0,29,29,0.0,nao_elegivel
+varzea|apartamento|3,varzea,apartamento,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,3,3,0.0,nao_elegivel
+varzea|apartamento|4+,varzea,apartamento,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+varzea|casa|1,varzea,casa,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,3,0,0,37.5,nao_elegivel
+varzea|casa|2,varzea,casa,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+varzea|casa|3,varzea,casa,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,1,3,3,8.333333333333332,nao_elegivel
+varzea|casa|4+,varzea,casa,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,1,1,1,100.0,nao_elegivel
+varzea|outros|1,varzea,outros,1,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+varzea|outros|2,varzea,outros,2,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,0.0,nao_elegivel
+varzea|outros|3,varzea,outros,3,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel
+varzea|outros|4+,varzea,outros,4+,n/a,inconclusiva,volume_ai+volume_vi,,,,,0,0,0,,nao_elegivel

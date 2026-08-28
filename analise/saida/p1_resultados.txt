@@ -1,0 +1,163 @@
+====================================================================================================
+P1 — PERFIL DE CÉLULAS E PRECISÃO (descritivo/metodológico)
+====================================================================================================
+airbnb anúncios=4441  com preço=999  (22.5%)
+vivareal anúncios (dedup)=8293  lançamentos/frente-mar marcados=472
+
+### D1. Distribuição de n_ai (Airbnb) por granularidade ###
+(n_total_ai = anúncios Airbnb na célula; n_com_price = com preço) 
+
+-- bairro×tipo×quartos --
+n células=130
+ n_total_ai: count     130.0 | mean       34.2 | std       146.5 | min         1.0 | 25%         2.0 | 50%         5.0 | 75%        11.8 | max      1451.0
+ n_com_price:count    130.0 | mean       7.7 | std       34.6 | min        0.0 | 25%        0.0 | 50%        0.5 | 75%        2.0 | max      327.0
+ células com n_com_price>=5: 16  (12%)
+ células com n_com_price>=10: 12
+ distribuição de n_com_price (top10 contagens): {0: 65, 1: 23, 2: 16, 3: 6, 4: 4, 65: 2, 5: 2, 12: 2, 11: 1, 78: 1}
+
+-- bairro×tipo --
+n células=41
+ n_total_ai: count      41.0 | mean      108.3 | std       411.2 | min         1.0 | 25%         5.0 | 50%        14.0 | 75%        31.0 | max      2602.0
+ n_com_price:count     41.0 | mean      24.4 | std       98.4 | min        0.0 | 25%        0.0 | 50%        2.0 | 75%        5.0 | max      607.0
+ células com n_com_price>=5: 14  (34%)
+ células com n_com_price>=10: 8
+ distribuição de n_com_price (top10 contagens): {0: 14, 1: 5, 3: 4, 5: 4, 2: 3, 13: 2, 4: 1, 193: 1, 9: 1, 607: 1}
+
+-- bairro --
+n células=16
+ n_total_ai: count      16.0 | mean      277.6 | std       712.2 | min         1.0 | 25%        14.8 | 50%        35.5 | 75%        98.2 | max      2860.0
+ n_com_price:count     16.0 | mean      62.4 | std      160.6 | min        0.0 | 25%        2.5 | 50%        5.5 | 75%       16.2 | max      632.0
+ células com n_com_price>=5: 10  (62%)
+ células com n_com_price>=10: 6
+ distribuição de n_com_price (top10 contagens): {1: 3, 5: 2, 3: 2, 9: 1, 15: 1, 205: 1, 10: 1, 0: 1, 632: 1, 83: 1}
+
+### D2. Distribuição de n_vi_total e n_vi_com_sale_price (VivaReal) por granularidade ###
+(n_vi_total = anúncios VivaReal elegíveis após dedup, com ou sem preço; 
+ n_vi_com_sale_price = anúncios com sale_price válido, efetivamente usados na estimativa)
+
+-- bairro×tipo×quartos --
+ n células=120
+ n_vi_total (sem excluir lançamento): count     120.0 | mean       69.1 | std       230.4 | min         1.0 | 25%         1.0 | 50%         5.0 | 75%        23.2 | max      1697.0
+ n_vi_com_sale_price (sem excluir lançamento): count     120.0 | mean       69.1 | std       230.4 | min         1.0 | 25%         1.0 | 50%         5.0 | 75%        23.2 | max      1697.0
+ n_vi_total (excluindo lançamentos): count     115.0 | mean       68.0 | std       221.9 | min         1.0 | 25%         1.5 | 50%         5.0 | 75%        25.0 | max      1638.0
+ n_vi_com_sale_price (excluindo lançamentos): count     115.0 | mean       68.0 | std       221.9 | min         1.0 | 25%         1.5 | 50%         5.0 | 75%        25.0 | max      1638.0
+ células com n_vi_com_sale_price>=5 (sem lanç): 61
+ células com n_vi_com_sale_price>=10 (sem lanç): 46
+ fração média n_vi_com_sale_price/n_vi_total (sem lanç): 1.000
+
+-- bairro×tipo --
+ n células=46
+ n_vi_total (sem excluir lançamento): count      46.0 | mean      180.3 | std       552.6 | min         1.0 | 25%         5.2 | 50%        16.5 | 75%        37.2 | max      3401.0
+ n_vi_com_sale_price (sem excluir lançamento): count      46.0 | mean      180.3 | std       552.6 | min         1.0 | 25%         5.2 | 50%        16.5 | 75%        37.2 | max      3401.0
+ n_vi_total (excluindo lançamentos): count      43.0 | mean      181.9 | std       536.2 | min         1.0 | 25%         7.0 | 50%        17.0 | 75%        58.5 | max      3202.0
+ n_vi_com_sale_price (excluindo lançamentos): count      43.0 | mean      181.9 | std       536.2 | min         1.0 | 25%         7.0 | 50%        17.0 | 75%        58.5 | max      3202.0
+ células com n_vi_com_sale_price>=5 (sem lanç): 36
+ células com n_vi_com_sale_price>=10 (sem lanç): 27
+ fração média n_vi_com_sale_price/n_vi_total (sem lanç): 1.000
+
+-- bairro --
+ n células=19
+ n_vi_total (sem excluir lançamento): count      19.0 | mean      436.5 | std       862.5 | min         1.0 | 25%        23.0 | 50%        95.0 | 75%       320.0 | max      3454.0
+ n_vi_com_sale_price (sem excluir lançamento): count      19.0 | mean      436.5 | std       862.5 | min         1.0 | 25%        23.0 | 50%        95.0 | 75%       320.0 | max      3454.0
+ n_vi_total (excluindo lançamentos): count      17.0 | mean      460.1 | std       849.2 | min         1.0 | 25%        40.0 | 50%        94.0 | 75%       494.0 | max      3253.0
+ n_vi_com_sale_price (excluindo lançamentos): count      17.0 | mean      460.1 | std       849.2 | min         1.0 | 25%        40.0 | 50%        94.0 | 75%       494.0 | max      3253.0
+ células com n_vi_com_sale_price>=5 (sem lanç): 14
+ células com n_vi_com_sale_price>=10 (sem lanç): 14
+ fração média n_vi_com_sale_price/n_vi_total (sem lanç): 1.000
+
+### D3. Cobertura Price (has_price%) por célula ###
+-- bairro×tipo×quartos (células com n_total_ai>=5): n=66
+count    66.0 | mean     16.3 | std      15.2 | min       0.0 | 25%       0.0 | 50%      14.6 | 75%      24.9 | max      67.2
+ P25 da cobertura: 0.0% | mediana: 14.6%
+-- bairro×tipo (células com n_total_ai>=5): n=32
+count    32.0 | mean     15.6 | std      15.2 | min       0.0 | 25%       5.8 | 50%      13.7 | 75%      21.5 | max      60.0
+ P25 da cobertura: 5.8% | mediana: 13.7%
+-- bairro (células com n_total_ai>=5): n=15
+count    15.0 | mean     21.5 | std      13.1 | min       5.6 | 25%      14.6 | 50%      18.8 | 75%      25.3 | max      60.0
+ P25 da cobertura: 14.6% | mediana: 18.8%
+
+### D4. IC95 da razão R — largura vs n_ai / n_vi_com_sale_price ###
+células com dados p/ bootstrap: 44
+meia-largura relativa do IC95(R): count    44.000 | mean      0.328 | std       0.392 | min       0.000 | 25%       0.105 | 50%       0.221 | 75%       0.419 | max       2.046
+  mediana half=0.221
+  fração células com half<=0.60: 86%
+
+half por faixa de n_ai:
+        count  median   mean    max
+n_ai_b                             
+1-4        29   0.210  0.291  1.507
+5-9         3   0.572  0.541  0.658
+10-19       4   0.375  0.750  2.046
+20-49       2   0.151  0.151  0.174
+50+         6   0.194  0.179  0.286
+ (half <=0.60 é 'adequado'; <=0.35 é 'bom')
+
+### D4b. Estudo de subsampling na maior célula (meia praia × apartamento × 3) ###
+AVISO: resultado LOCAL à maior célula; com amostragem com reposição antes do bootstrap;
+não é demonstração de tamanho amostral universal.
+n_ai=327, n_vi_total=1638, n_vi_com_sale_price=1638
+    n  half_med  half_p75
+0   3     0.764     0.910
+1   5     0.803     0.947
+2   8     0.424     0.530
+3  12     0.335     0.374
+4  20     0.261     0.304
+5  30     0.206     0.264
+6  50     0.174     0.192
+=> evidência local de que a precisão (half) melhora com n nesta célula;
+   o GATE de precisão da metodologia continua sendo half IC95(R) ≤ 0,60 medido por célula,
+   não um n fixo (ex.: 8) universal.
+
+### D5. n_datas dos anúncios com preço e estabilidade da mediana individual ###
+count    999.0 | mean      58.7 | std       23.3 | min        2.0 | 25%       41.5 | 50%       62.0 | 75%       77.0 | max      105.0
+distribuição n_datas (contagem de anúncios): {2.0: 3, 3.0: 1, 5.0: 2, 6.0: 2, 7.0: 1, 8.0: 1, 9.0: 3, 10.0: 4, 11.0: 6, 12.0: 7, 13.0: 10, 14.0: 2, 15.0: 6, 16.0: 5, 17.0: 2}
+
+anúncios com n>=3: 1002
+relSE da mediana individual por faixa de n_datas (bootstrap das noites sob iid):
+       count    med   mean    p90
+nb                               
+3-4        1  0.000  0.000  0.000
+5-6        4  0.000  0.000  0.000
+7-10       9  0.000  0.010  0.031
+11-15     31  0.018  0.071  0.204
+16-20     21  0.006  0.037  0.093
+21-30     77  0.036  0.066  0.184
+31-40     99  0.023  0.051  0.137
+41-60    242  0.025  0.050  0.134
+61+      518  0.028  0.048  0.127
+=> ATENÇÃO: bootstrap iid das noites NÃO captura sazonalidade/dia da semana/feriados/dependência
+   temporal do preço. Serve apenas como análise exploratória de estabilidade; NÃO é tamanho
+   amostral estatisticamente comprovado. O limiar operacional n_datas (S2) é critério de
+   negócio conservador, apoiado nessa exploração.
+
+### D6. Granularidade de quartos 1|2|3|4+ ###
+distribuição de número_de_bedrooms (todos / com preço):
+   sb     n  n_price
+0   0    56        8
+1   1   549      144
+2   2  1482      351
+3   3  1922      404
+4  4+   432       92
+
+0 (zero quartos): 56 anúncios — tratar como 'sem informação'? (n com preço: 8)
+
+### D7. Avaliação do piso n>=5 (quantas células perde) ###
+células finas totais=130 | com >=1 preço=65
+  células com n_com_price>=1: 65
+  células com n_com_price>=3: 26
+  células com n_com_price>=5: 16
+  células com n_com_price>=8: 14
+  células com n_com_price>=10: 12
+  células com n_com_price>=15: 8
+  células com n_com_price>=20: 8
+
+### D8. Meia-largura × n_ai × n_vi_com_sale_price (mediana) ###
+n_vi_b    1-4    5-9  10-19    20+
+n_ai_b                            
+1-4     0.071  0.638  0.240  0.111
+5-9       NaN    NaN  0.572  0.526
+10-19   2.046    NaN  0.205  0.375
+20-49     NaN    NaN    NaN  0.151
+50+       NaN    NaN    NaN  0.194
+
+FIM_P1

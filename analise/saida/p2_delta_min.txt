@@ -1,0 +1,66 @@
+====================================================================================================
+P2 — EFEITO MÍNIMO Δ_min (análise de impacto; sem ranking)
+====================================================================================================
+células elegíveis (piso provisório n>=5 em ambos): 14
+R (diária_venda) por célula — descritivo (sem ordenar por ranking):
+                                      cel  n_ai  n_vi_total  n_vi_com_sale_price          D          V       R    half
+0               casa branca|apartamento|2    11          19                   19   350.0000   650000.0  0.0005  0.1954
+1                    centro|apartamento|1    78          21                   21   448.0000   890000.0  0.0005  0.2813
+2                    centro|apartamento|2    65          86                   86   600.0000  1122500.0  0.0005  0.2383
+3                    centro|apartamento|3    45         420                  420   780.0000  2100000.0  0.0004  0.1340
+4                   centro|apartamento|4+     5         362                  362   790.0000  3742580.5  0.0002  0.4039
+5                meia praia|apartamento|1    20          57                   57   441.0000   880000.0  0.0005  0.1790
+6                meia praia|apartamento|2   187         241                  241   450.0000  1090000.0  0.0004  0.1032
+7                meia praia|apartamento|3   327        1638                 1638   682.6666  1880000.0  0.0004  0.0476
+8               meia praia|apartamento|4+    65        1266                 1266  1200.0000  3500000.0  0.0003  0.2553
+9                       meia praia|casa|3     5          11                   11   450.0000  1800000.0  0.0002  0.5716
+10                 morretes|apartamento|2    51         999                  999   470.0000   789000.0  0.0006  0.1594
+11                 morretes|apartamento|3    10         141                  141   650.0000   844000.0  0.0008  0.3966
+12                        morretes|casa|2     9         196                  196   361.0000   570000.0  0.0006  0.6678
+13  tabuleiro dos oliveiras|apartamento|2    12         108                  108   450.0000   781919.5  0.0006  0.3703
+
+### Significado operacional de cada diferença relativa de R ###
+referência: mediana D=460 R$/noite | mediana V=990,000 R$ | R(med)=0.000465
+
+cenário de diferença | múltiplo R | Δ=ln(1+pct) | exemplo (D fixo, V varia) | exemplo (V fixo, D varia)
+     10%          x1.10     +0.0953      D=460/V=900,000        V=990,000/D=506
+     15%          x1.15     +0.1398      D=460/V=860,870        V=990,000/D=529
+     20%          x1.20     +0.1823      D=460/V=825,000        V=990,000/D=552
+     25%          x1.25     +0.2231      D=460/V=792,000        V=990,000/D=575
+     30%          x1.30     +0.2624      D=460/V=761,538        V=990,000/D=598
+     40%          x1.40     +0.3365      D=460/V=707,143        V=990,000/D=644
+
+interpretação: R diferir 25% (x1.25) equivale, com diária fixa, a um capital de aquisição ~20% menor (1/1.25) ou, com capital fixo, a diária 25% maior.
+
+### Distribuição das diferenças pareadas |Δ| entre células elegíveis ###
+pares de células: 91
+count    91.000
+mean      0.416
+std       0.302
+min       0.004
+25%       0.169
+50%       0.371
+75%       0.561
+max       1.294
+percentis |Δ|: {'p0.1': 0.067, 'p0.25': 0.169, 'p0.5': 0.371, 'p0.75': 0.561, 'p0.9': 0.868}
+
+### Quantos pares observados ficariam abaixo de cada Δ_min (abaixo do limiar de materialidade) ###
+(fração dos pares comparáveis cuja diferença observada não superaria a cláusula
+ de materialidade — isso NÃO é ruído mensurado; é interpretação metodológica de 
+ diferença considerada insuficiente para distinguir segmentos)
+  Δ_min= 10% (Δ=+0.0953) ->  14.3% dos pares abaixo do limiar   | acima: 85.7%
+  Δ_min= 15% (Δ=+0.1398) ->  22.0% dos pares abaixo do limiar   | acima: 78.0%
+  Δ_min= 20% (Δ=+0.1823) ->  27.5% dos pares abaixo do limiar   | acima: 72.5%
+  Δ_min= 25% (Δ=+0.2231) ->  31.9% dos pares abaixo do limiar   | acima: 68.1%
+  Δ_min= 30% (Δ=+0.2624) ->  36.3% dos pares abaixo do limiar   | acima: 63.7%
+  Δ_min= 40% (Δ=+0.3365) ->  45.1% dos pares abaixo do limiar   | acima: 54.9%
+
+### RECOMENDAÇÃO (hipótese metodológica provisória — NÃO descoberta empírica) ###
+Sem referência interna da Seazone (não disponível), não há base objetiva para fixar o Δ_min.
+O P2 apenas descreve a distribuição observada das diferenças entre as células analisadas;
+não demonstra qual valor de relevância é 'correto'.
+Proposta provisória: Δ_min = ln(1,25) ≈ 0,223 (diferença relativa de 25% em R), 
+declarada como HIPÓTESE METODOLÓGICA de materialidade. 
+Esse valor NÃO foi descoberto empiricamente pelos dados e não representa um valor 
+econômico objetivo. Sensibilidade obrigatória nas vizinhanças 15%, 25% e 30%.
+Se a Seazone definir outro valor de relevância econômica, basta re-executar o pipeline.
