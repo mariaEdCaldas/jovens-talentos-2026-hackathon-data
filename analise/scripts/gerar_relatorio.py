@@ -17,7 +17,9 @@ def fmt(x):
         return "—"
     return f"{x:,.4f}" if isinstance(x, float) else str(x)
 
-def main():
+def gerar_relatorio_md():
+    """Gera relatorio_implementacao.md a partir das saídas do pipeline.
+    Retorna o caminho do relatório. Reutilizável pelo run_pipeline."""
     with open(os.path.join(OUT_DIR, "pipeline_resultados.json"), "r", encoding="utf-8") as f:
         res = json.load(f)
     s1 = pd.read_csv(os.path.join(OUT_DIR, "s1_segmentos.csv"))
@@ -83,7 +85,7 @@ def main():
     w("- Janela jan–abr/2025; capturas em jan/2025.")
     w("")
     w("## 8. Decisões de implementação dentro da metodologia congelada")
-    w("1. **“Não dominada” ≠ “prioritária”:** uma célula só é priorizada se, além de não ser dominada, **dominar pelo menos uma outra célula elegível** (via Δ/FDR/Δ_min). Não dominada sem dominar ninguém → “não dominada sem evidência” (não priorizada). Emitido semípara quando aplicável.")
+    w("1. **“Não dominada” ≠ “prioritária”:** uma célula só é priorizada se, além de não ser dominada, **dominar pelo menos uma outra célula elegível** (via Δ/FDR/Δ_min). Não dominada sem dominar ninguém → “não dominada sem evidência” (não priorizada).")
     w("2. **Fallback e duplicação de S2:** sub-células (ex.: bairro|tipo|q distintas) que caem no mesmo nível de fallback compartilham o mesmo estimador; a S2 **deduplica por anúncio** para não repetir candidatos.")
     w("3. **Regra §6 “cobertura<P25 + baixo volume → inconclusivo”:** ‘baixo volume’ não tem número definido na metodologia; **não** foi aplicado como rebaixador automático. A cobertura é reportada por célula; se o analista definir um valor para “baixo volume”, pode ser habilitado sem alterar a metodologia.")
     w("4. **has_price na S2:** usado somente como condição de **disponibilidade de informação** (o anúncio precisa ter preço observado para ser avaliado); não contribui positivamente para a atratividade.")
@@ -113,12 +115,16 @@ def main():
     w("")
     w("_Gerado por run_pipeline.py + gerar_relatorio.py. Reproduzível do zero._")
 
-    with open(os.path.join(OUT_DIR, "..", "relatorio_implementacao.md") if False else
-              os.path.join(os.path.dirname(OUT_DIR), "relatorio_implementacao.md"),
-              "w", encoding="utf-8") as f:
+    caminho = os.path.join(os.path.dirname(OUT_DIR), "relatorio_implementacao.md")
+    with open(caminho, "w", encoding="utf-8") as f:
         f.write("\n".join(L))
-    print("relatorio_implementacao.md escrito em",
-          os.path.join(os.path.dirname(OUT_DIR), "relatorio_implementacao.md"))
+    return caminho
+
+
+def main():
+    caminho = gerar_relatorio_md()
+    print("relatorio_implementacao.md escrito em", caminho)
+
 
 if __name__ == "__main__":
     main()

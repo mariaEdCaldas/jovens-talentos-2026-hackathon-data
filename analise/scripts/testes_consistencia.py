@@ -24,7 +24,9 @@ def hash_arquivos():
         out[f] = h.hexdigest()[:16]
     return out
 
-def main():
+def executar_validacao():
+    """Executa os testes de consistência sobre os outputs do pipeline.
+    Retorna True se todos passarem. Reutilizável pelo run_pipeline."""
     ok = True
     def check(cond, msg):
         nonlocal ok
@@ -46,10 +48,8 @@ def main():
     # (3) R recomputado: pegar uma célula priorizada e verificar consistência
     s1 = pd.read_csv(os.path.join(OUT_DIR, "s1_segmentos.csv"))
     prio = s1[s1["status"] == "prioritaria"]
-    # recomputar R para a primeira célula priorizada com n_ai>0
     if len(prio):
         row = prio.iloc[0]
-        # compara IC/R reportados com presença de números válidos
         check(pd.notna(row["R"]) and pd.notna(row["half"]),
               f"célula {row['bairro_tipo_quartos']} tem R e half válidos")
 
@@ -80,6 +80,10 @@ def main():
     print("TODOS OS TESTES PASSARAM" if ok else "EXISTEM FALHAS")
     return ok
 
-if __name__ == "__main__":
-    ok = main()
+
+def main():
+    ok = executar_validacao()
     sys.exit(0 if ok else 1)
+
+if __name__ == "__main__":
+    main()

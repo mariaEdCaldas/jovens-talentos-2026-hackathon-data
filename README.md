@@ -127,12 +127,28 @@ Limitações estruturais que restringem o que é possível afirmar:
 
 ## Reproducibilidade
 
-O pipeline de análise será documentado com o comando de execução na próxima etapa. Até lá, os artefatos principais já estão no repositório:
+O pipeline completo pode ser executado a partir de um único comando, na raiz do repositório:
 
-- `analise/scripts/*.py` — módulos da solução (config, features, elegibilidade, inferência, comparação, S1, S2).
-- `analise/saida/*.csv|*.json` — outputs primários (S1, S2, evidências, recomendação).
+```bash
+python analise/scripts/run_pipeline.py
+```
 
-> Seção em construção: o comando **ainda não existe** nesta versão e não será inventado aqui.
+O comando:
+
+- parte **sempre dos datasets originais** (`data/`) e gera novamente os outputs derivados;
+- **não altera** os datasets originais (verifica integridade por hash SHA-256);
+- é **determinístico** (bootstrap com seed fixa em `analise/scripts/config.py`);
+- roda de ponta a ponta: carregamento → tratamento → features → elegibilidade/fallback → inferência → comparação → S1 → S2 → evidências → recomendação → relatório final → validação.
+
+Main outputs gerados em `analise/saida/`:
+
+- `analise/saida/s1_segmentos.csv`
+- `analise/saida/s1_inconclusivas.csv`
+- `analise/saida/s2_candidatos.csv`
+- `analise/saida/evidencias.csv`
+- `analise/saida/recomendacao_segmentos.csv`
+- `analise/saida/pipeline_resultados.json`
+- `analise/relatorio_implementacao.md`
 
 ---
 
