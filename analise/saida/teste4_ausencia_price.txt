@@ -1,0 +1,129 @@
+TESTE 4 — Ausencia em Price e cobertura de datas
+periodo possivel: 2025-01-06 a 2025-04-20 = 105 dias
+
+### Cobertura de datas por listing (union) — 1005 listings ###
+count    1005.0
+mean       58.7
+std        23.3
+min         2.0
+25%        42.0
+50%        62.0
+75%        77.0
+max       105.0
+
+distribuicao de count (n datas cobertas):
+count
+2      3
+3      1
+5      2
+6      2
+7      1
+8      1
+9      3
+10     4
+11     6
+12     7
+13    10
+14     2
+15     6
+16     5
+17     2
+18     5
+19     3
+20     6
+21     5
+22     5
+23     9
+24     4
+25     6
+26    12
+27    13
+28     7
+29    11
+30     5
+31     9
+32     5
+33     8
+34     9
+35    11
+36    14
+37     8
+38    14
+39    11
+40    10
+41     6
+42    11
+
+### Listings por faixa de datas cobertas ###
+faixa
+1-9        17
+10-29     129
+30-59     341
+60-89     458
+90-105     60
+
+### Minimo de datas (inicio do calendario coberto) ###
+min
+2025-01-06    21
+2025-01-07    33
+2025-01-08    21
+2025-01-09    18
+2025-01-10    25
+2025-01-11    25
+2025-01-12    41
+2025-01-13    42
+2025-01-14    32
+2025-01-15    26
+### Maximo de datas (fim do calendario coberto) ###
+max
+2025-04-06     85
+2025-04-07     84
+2025-04-08      2
+2025-04-09      1
+2025-04-10      3
+2025-04-11      4
+2025-04-12      2
+2025-04-13      2
+2025-04-14      4
+2025-04-15      9
+2025-04-16     44
+2025-04-17     53
+2025-04-18      2
+2025-04-19     56
+2025-04-20    474
+
+### continuação do calendario (gaps internos?) ###
+listings com 0 faltas internas no intervalo (contíguos): 244 de 1005
+listings com faltas internas >5% do intervalo: 734
+count    1005.00
+mean       20.50
+std        18.56
+min         0.00
+25%         2.41
+50%        16.92
+75%        32.35
+max        84.06
+
+### Caracteristicas por grupo de cobertura ###
+n por grupo: {'cheio(>=60d)': 537, 'medio': 327, 'magro(<30d)': 141}
+                n  med_datas  med_reviews  med_star  med_pic  med_clean   pct_fav  pct_prof
+grupo                                                                                      
+cheio(>=60d)  537       76.0         14.0      4.93     20.0      250.0  0.545113  0.268939
+magro(<30d)   141       21.0         20.5      4.94     24.0      250.0  0.692857   0.06015
+medio         327       46.0         21.0      4.93     22.0      250.0  0.663609  0.119266
+
+fracao apartmentos por grupo:
+listing_type  apartamento   casa  hotel  outros
+grupo                                          
+cheio(>=60d)        0.929  0.060  0.000   0.011
+magro(<30d)         0.914  0.071  0.000   0.014
+medio               0.884  0.086  0.003   0.028
+
+### correlacao cobertura(datas) vs n_capturas ###
+       count  n_cap
+count  1.000  0.306
+n_cap  0.306  1.000
+
+### Conclusao estrutural ###
+Sem coluna de calendario/disponibilidade, ausencia = NAO COLETADO ou BLOQUEADO,
+indistinguivel nos dados.

@@ -1,0 +1,109 @@
+TESTE 10 — Relacionamento Airbnb x VivaReal
+airbnb listings=4441 (com price: 999)  | vivareal=8329
+
+### Estrategia A: bairro canonico somente ###
+                         airbnb_all  airbnb_com_preco  vivareal viv_a_m2?
+bairro                                                                   
+alto sao bento                   62                 5        66          
+areal                             5                 1         0          
+canto da praia                   28                 9       131          
+casa branca                      88                15        95          
+centro                          657               205      1010          
+ilhota                           56                10        55          
+jardim praiamar                   5                 1       104          
+lameiro                           1                 0         0          
+leopoldo zarling                 18                 1         0          
+meia praia                     2860               632      3467          
+morretes                        441                83      1777          
+sem_bairro                        5                 3        98          
+sertao do trombudo               22                 3        42          
+sertaozinho                      21                 6         1          
+tabuleiro dos oliveiras         129                20       135          
+varzea                           43                 5        47          
+andorinha                         0                 0       782          
+castelo branco                    0                 0       510          
+estreito                          0                 0         5          
+itapema                           0                 0         2          
+meia_praia_frente_mar             0                 0         1          
+ocean tower                       0                 0         1          
+
+bairros 100% cobertos nos dois universos: ['alto sao bento', 'canto da praia', 'casa branca', 'centro', 'ilhota', 'jardim praiamar', 'meia praia', 'morretes', 'sem_bairro', 'sertao do trombudo', 'sertaozinho', 'tabuleiro dos oliveiras', 'varzea']
+bairros so airbnb: ['areal', 'lameiro', 'leopoldo zarling']
+bairros so vivareal: ['andorinha', 'castelo branco', 'estreito', 'itapema', 'meia_praia_frente_mar', 'ocean tower']
+
+cobertura de bairros: 81.2% dos bairros airbnb possuem oferta vivareal
+
+### Estrategia B: bairro + listing_type ###
+                         ai_apartamento  ai_casa  ai_outros  vi_apartamento  vi_casa  vi_comercial  vi_outros  vi_terreno
+bairro                                                                                                                   
+alto sao bento                       29       24          9              35       16             2          0          13
+areal                                 0        4          1               0        0             0          0           0
+canto da praia                        9       17          2             103       27             0          0           1
+casa branca                          63       19          6              27       38             0          4          26
+centro                              548       62         47             985       17             8          0           0
+ilhota                               22       23         11              28       22             0          0           5
+jardim praiamar                       4        1          0             103        0             0          0           1
+lameiro                               0        0          1               0        0             0          0           0
+leopoldo zarling                      8        9          1               0        0             0          0           0
+meia praia                         2602       90        168            3414       19            28          1           5
+morretes                            318       99         24            1307      367            23          0          80
+sem_bairro                            0        5          0              88        7             0          1           2
+sertao do trombudo                    0       21          1              12        8             0          4          18
+sertaozinho                           2       14          5               1        0             0          0           0
+tabuleiro dos oliveiras              99       24          6             129        5             0          0           1
+varzea                                6       31          6              33        4             0          0          10
+andorinha                             0        0          0             759        9            13          0           1
+castelo branco                        0        0          0             496        8             5          0           1
+estreito                              0        0          0               5        0             0          0           0
+itapema                               0        0          0               2        0             0          0           0
+meia_praia_frente_mar                 0        0          0               1        0             0          0           0
+ocean tower                           0        0          0               1        0             0          0           0
+
+### Estrategia C: bairro + tipo + quartos (ambos universos) ###
+combinacoes bairro+tipo+quartos present nos DOIS universos: 60 de 177
+top 12 combinacoes por n (ambos):
+                      bairro         tipo   q  airbnb  vivareal  ambos
+99                meia praia  apartamento   3    1451      1704   True
+98                meia praia  apartamento   2     723       244   True
+100               meia praia  apartamento  4+     318      1408   True
+113                 morretes  apartamento   2     229      1044   True
+58                    centro  apartamento   3     211       438   True
+57                    centro  apartamento   2     183        89   True
+106               meia praia       outros   1     133         1   True
+56                    centro  apartamento   1     118        22   True
+97                meia praia  apartamento   1     110        58   True
+157  tabuleiro dos oliveiras  apartamento   2      74       111   True
+114                 morretes  apartamento   3      59       155   True
+36               casa branca  apartamento   2      53        20   True
+
+### Estrategia D: area (so vivareal tem area; airbnb NAO tem m2) ###
+=> INVIAVEL cruzar area: airbnb nao tem usable_area. Alternativa: comparar quartos/camas apenas.
+
+### Estrategia E: geografica ###
+airbnb: lat/lon no mesh | vivareal: NAO possui lat/lon => sem georreferenciamento direto.
+proximidade geografica so possivel nivel-bairro, nao ponto.
+
+### comparacao de perfil por bairro (mediana) ###
+                          n_ai  med_quartos    n_vi  med_venda  med_area
+bairro                                                                  
+alto sao bento             5.0          1.0    35.0   618710.0      65.0
+areal                      1.0          1.0     NaN        NaN       NaN
+canto da praia             9.0          2.0   103.0  1690000.0     116.0
+casa branca               15.0          2.0    27.0   698000.0      70.0
+centro                   205.0          2.0   985.0  2600000.0     149.0
+ilhota                    10.0          2.0    28.0  2684942.0     147.0
+jardim praiamar            1.0          1.0   103.0   725000.0      64.0
+leopoldo zarling           1.0          1.0     NaN        NaN       NaN
+meia praia               632.0          3.0  3414.0  2306900.0     144.0
+morretes                  83.0          2.0  1307.0   797000.0      69.0
+sem_bairro                 3.0          1.0    88.0  1600000.0     130.0
+sertao do trombudo         3.0          1.0    12.0   849000.0      69.0
+sertaozinho                6.0          2.0     1.0   529360.0      55.0
+tabuleiro dos oliveiras   20.0          2.0   129.0   782900.0      69.0
+varzea                     5.0          1.0    33.0   650000.0      70.0
+andorinha                  NaN          NaN   759.0  1799890.0     127.0
+castelo branco             NaN          NaN   496.0  1699050.0     130.0
+estreito                   NaN          NaN     5.0  4895000.0     230.0
+itapema                    NaN          NaN     2.0  1614948.0      97.0
+meia_praia_frente_mar      NaN          NaN     1.0  6830000.0     157.0
+ocean tower                NaN          NaN     1.0  4500000.0     226.0

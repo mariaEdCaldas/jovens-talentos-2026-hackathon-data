@@ -1,0 +1,60 @@
+TESTE 8 — Bairros: normalizacao
+ORIGINAL                        AIRBNB  VIVAREAL norm                   proposta
+Alto Sao Bento                      62         0 alto sao bento        
+Alto São Bento                       0        66 alto sao bento        
+Andorinha                            0       782 andorinha             
+Areal                                5         0 areal                 
+CENTRO                               0         1 centro                
+Canto da Praia                      28       131 canto da praia        
+Casa Branca                         88        95 casa branca           
+Castelo Branco                       0       510 castelo branco        
+Centro                             657      1009 centro                
+Estreito                             0         5 estreito              
+Ilhota                              56        55 ilhota                
+Itapema                              0         2 itapema               
+Jardim Praia Mar                     0       104 jardim praia mar      
+Jardim Praiamar                      5         0 jardim praiamar       
+Lameiro                              1         0 lameiro               
+Leopoldo Zarling                    18         0 leopoldo zarling      
+MEIA PRAIA                           0         1 meia praia            
+Meia Praia                        2860      3452 meia praia            
+Meia Praia - Frente Mar              0         1 meia praia _frentemar 
+Meia praia                           0         8 meia praia            
+Morretes                           441      1777 morretes              
+Ocean Tower                          0         1 ocean tower           
+Sertao do Trombudo                  22         0 sertao do trombudo    
+Sertaozinho                         21         0 sertaozinho           
+Sertão Do Trombudo                   0         2 sertao do trombudo    
+Sertão do Trombudo                   0        40 sertao do trombudo    
+Sertãozinho                          0         1 sertaozinho           
+Taboleiro                            0         1 taboleiro             
+Tabuleiro                            0         6 tabuleiro             
+Tabuleiro dos Oliveiras            129       128 tabuleiro dos oliveiras
+Varzea                              43        47 varzea                
+meia praia                           0         6 meia praia            
+none                                 5         0 none                  
+
+### Grupos candidatos a UNIAO (textualmente identicos apos acentos/caixa) ###
+alto sao bento: ['Alto Sao Bento', 'Alto São Bento']
+centro: ['CENTRO', 'Centro']
+meia praia: ['MEIA PRAIA', 'Meia Praia', 'Meia praia', 'meia praia']
+sertao do trombudo: ['Sertao do Trombudo', 'Sertão Do Trombudo', 'Sertão do Trombudo']
+sertaozinho: ['Sertaozinho', 'Sertãozinho']
+
+### Analise semantica dos grupos com mais de uma versao ###
+CANON proposto: Meia Praia <- ['Meia Praia', 'MEIA PRAIA', 'Meia praia', 'meia praia']
+CANON proposto: Meia Praia (frente mar) <- ['Meia Praia - Frente Mar']
+CANON proposto: Centro <- ['Centro', 'CENTRO']
+CANON proposto: Tabuleiro dos Oliveiras <- ['Tabuleiro dos Oliveiras', 'Tabuleiro', 'Taboleiro']
+CANON proposto: Sertao do Trombudo <- ['Sertao do Trombudo', 'Sertao Do Trombudo']
+CANON proposto: Alto Sao Bento <- ['Alto Sao Bento', 'Alto São Bento']
+CANON proposto: Sertaozinho <- ['Sertaozinho', 'Sertãozinho']
+CANON proposto: Jardim Praiamar <- ['Jardim Praiamar', 'Jardim Praia Mar']
+
+### Bairros apenas em um universo ###
+so AIRBNB: ['Alto Sao Bento', 'Areal', 'Jardim Praiamar', 'Lameiro', 'Leopoldo Zarling', 'Sertao do Trombudo', 'Sertaozinho', 'none']
+so VIVAREAL: ['Alto São Bento', 'Andorinha', 'CENTRO', 'Castelo Branco', 'Estreito', 'Itapema', 'Jardim Praia Mar', 'MEIA PRAIA', 'Meia Praia - Frente Mar', 'Meia praia', 'Ocean Tower', 'Sertão Do Trombudo', 'Sertão do Trombudo', 'Sertãozinho', 'Taboleiro', 'Tabuleiro', 'meia praia']
+
+### casos especiais ###
+'none' (airbnb): nao-coleta de bairro
+'Ocean Tower', 'Itapema', 'Estreito': sidras/empreendimento ou cidade em vez de bairro

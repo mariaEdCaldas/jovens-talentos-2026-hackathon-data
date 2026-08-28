@@ -1,0 +1,140 @@
+TESTE 9 — Outliers VivaReal por listing_type
+n por tipo: {'apartamento': 7529, 'casa': 547, 'terreno': 164, 'comercial': 79, 'outros': 10}
+
+================================================================================
+### apartamento (n=7497) ###
+sale_price         n= 7497 mediana=     1840000 P90=     4849880 P99=    11990000 max=    44000000 nulos=0
+usable_area        n= 7497 mediana=         129 P90=         217 P99=         440 max=       66585 nulos=0
+monthly_condo_fee  n= 5257 mediana=         350 P90=        1000 P99=        2500 max=     3150000 nulos=2240
+yearly_iptu        n= 4971 mediana=         100 P90=        2975 P99=       10860 max=     2800000 nulos=2526
+preço/m2       n= 7497 mediana=     14414 P90=     25346 max=      669000 | IQR x3 upper=       38548
+  -- maiores preco_m2 (top6): 
+5942    669000.0
+5926    599800.0
+5950    525000.0
+5899    520000.0
+5948    515000.0
+5953    429000.0
+================================================================================
+### casa (n=547) ###
+sale_price         n=  547 mediana=      743000 P90=     6500000 P99=    18370000 max=    25000000 nulos=0
+usable_area        n=  547 mediana=         100 P90=         350 P99=         816 max=        2000 nulos=0
+monthly_condo_fee  n=  400 mediana=           0 P90=          10 P99=        2002 max=        2500 nulos=147
+yearly_iptu        n=  458 mediana=         500 P90=        1000 P99=        7000 max=       22000 nulos=89
+preço/m2       n=  547 mediana=      7440 P90=     18244 max=       75498 | IQR x3 upper=       18034
+  -- maiores preco_m2 (top6): 
+6036    75498.0
+5847    65385.0
+1268    49437.0
+1603    38698.0
+1488    35371.0
+1779    35344.0
+================================================================================
+### terreno (n=160) ###
+sale_price         n=  160 mediana=      737500 P90=     3300000 P99=    10075000 max=    39499800 nulos=0
+usable_area        n=  160 mediana=         300 P90=        1606 P99=       13580 max=      188000 nulos=0
+monthly_condo_fee  n=  105 mediana=           0 P90=           1 P99=        1623 max=        1666 nulos=55
+yearly_iptu        n=  116 mediana=         198 P90=        1000 P99=        6260 max=       19999 nulos=44
+preço/m2       n=  149 mediana=      2257 P90=      4792 max=      510000 | IQR x3 upper=        5702
+  -- maiores preco_m2 (top6): 
+1607    510000.0
+1133     15556.0
+6382     13830.0
+1011     13265.0
+1028     11618.0
+78       10044.0
+================================================================================
+### comercial (n=79) ###
+sale_price         n=   79 mediana=     1500000 P90=     5673346 P99=    14954800 max=    16000000 nulos=0
+usable_area        n=   79 mediana=          92 P90=         341 P99=        1000 max=        1000 nulos=0
+monthly_condo_fee  n=   49 mediana=           0 P90=         603 P99=      519920 max=      998000 nulos=30
+yearly_iptu        n=   42 mediana=         100 P90=        2955 P99=       33568 max=       33568 nulos=37
+preço/m2       n=   79 mediana=     14625 P90=     31667 max=       45763 | IQR x3 upper=       48457
+  -- maiores preco_m2 (top6): 
+6808    45763.0
+250     45325.0
+5931    40472.0
+5924    39722.0
+5869    32596.0
+187     32596.0
+================================================================================
+### outros (n=10) ###
+sale_price         n=   10 mediana=     5224655 P90=     6104963 P99=     7360163 max=     7499630 nulos=0
+usable_area        n=   10 mediana=         370 P90=       17306 P99=       22431 max=       23000 nulos=0
+monthly_condo_fee  n=    4 mediana=           0 P90=           1 P99=           1 max=           1 nulos=6
+yearly_iptu        n=    7 mediana=         250 P90=        2934 P99=        3384 max=        3434 nulos=3
+preço/m2       n=   10 mediana=      7575 P90=     17961 max=       23611 | IQR x3 upper=       61999
+  -- maiores preco_m2 (top6): 
+5235    23611.0
+412     17333.0
+5598    17045.0
+7007    12500.0
+4671     9649.0
+1722     5500.0
+
+### maiores areas por tipo (top4) ###
+-- apartamento:
+      listing_id  sale_price  usable_area  bedrooms  bathrooms            suburb
+1182  2765883927   8718723.0        66585         5          6         Andorinha
+7237  2764633025   1000000.0         4448         1          1            Centro
+7860  2764631051    885445.0         4437         1          1        Meia Praia
+1161  2764633839    449000.0         4161         1          1  Jardim Praia Mar
+-- casa:
+      listing_id  sale_price  usable_area  bedrooms  bathrooms  suburb
+1751  2735565849  17000000.0         2000         5          7  Ilhota
+1411  2740231380  25000000.0         1747         5          6  Ilhota
+1097  2758287618  20000900.0         1635         6          8  Ilhota
+1562  2749232997  14950000.0         1000         6          5  Ilhota
+-- terreno:
+      listing_id  sale_price  usable_area  bedrooms  bathrooms                   suburb
+1274  2695400175   2400000.0       188000         0          0              Casa Branca
+3484  2663264055   5250000.0        16574         0          0       Sertão do Trombudo
+813   2740138471  14500000.0        11500         0          0  Tabuleiro dos Oliveiras
+1028  2766852231  39499800.0         3400         0          0           Canto da Praia
+-- comercial:
+      listing_id  sale_price  usable_area  bedrooms  bathrooms      suburb
+2023  2770028533  10999780.0         1000         0          5   Andorinha
+7734  2767561421  16000000.0         1000         0          0   Andorinha
+1472  2758554925  14660000.0          800         0          5  Meia Praia
+1707  2769847033  14659530.0          800         1          2  Meia Praia
+
+### maiores sale_price por tipo (top4) ###
+-- apartamento:
+      listing_id  sale_price  usable_area  bedrooms      suburb                                                                                   listing_title
+1401  2735746826  44000000.0          966         7  Meia Praia                             Lançamento 966m² privativos frente mar em Meia Praia - Itapema - SC
+787   2753354111  25000000.0          332         5         NaN                                                           CNA Latitude Residences codigo: 90302
+1511  2752959293  24990000.0          331         5  Meia Praia  APARTAMENTO LANÇAMENTO COM 5 SUITES SENDO 2 MASTER, FRENTE AO MAR EM MEIA PRAIA - ITAPEMA - SC
+1816  2761579415  24990000.0          331         5  Meia Praia       Apartamento - 5 dormitórios - 5 Suítes - localizado em Itapema / Meia Praia REF: DW461435
+-- casa:
+      listing_id  sale_price  usable_area  bedrooms    suburb                                                                      listing_title
+1411  2740231380  25000000.0         1747         5    Ilhota                                                                CASA DE ALTO PADRÃO
+6036  2735193923  24990000.0          331         5  Morretes                                          Itapema - Apartamento Padrão - Meia Praia
+974   2723972240  21000000.0          856         6    Ilhota                              Linda casa de alto padrão no condomínio Plaza Itapema
+1097  2758287618  20000900.0         1635         6    Ilhota  Luxuosa casa em condomínio com Vista para o Mar e 6 suítes, à venda em Itapema/SC
+-- terreno:
+      listing_id  sale_price  usable_area  bedrooms                   suburb                                                            listing_title
+1028  2766852231  39499800.0         3400         0           Canto da Praia  ÁREA COM 3.400m² + CASA FRENTE MAR à venda, Canto da Praia - Itapema/SC
+813   2740138471  14500000.0        11500         0  Tabuleiro dos Oliveiras    Excelente terreno com 11.500m² - Tabuleiro dos Oliveiras - Itapema/SC
+1133  2761666714   7000000.0          450         0                   Ilhota              Terreno no Condomínio Plaza em Itapema com 450m² privativos
+1011  2761666519   6500000.0          490         0                   Ilhota            Terreno no Condomínio Plaza em Itapema com 490m² privativos .
+-- comercial:
+      listing_id  sale_price  usable_area  bedrooms      suburb                                                           listing_title
+7734  2767561421  16000000.0         1000         0   Andorinha  SALA COMERCIAL, TEM 1000M², 400 MTS DO MAR EM MEIA PRAIA - ITAPEMA -SC
+1472  2758554925  14660000.0          800         0  Meia Praia        Sala à venda, 800 m² por R$ 14.660.000 - Meia Praia - Itapema/SC
+1707  2769847033  14659530.0          800         1  Meia Praia                 Sala comercial em Nereu Ramos - Meia Praia - Itapema/SC
+5740  2769187146  14659460.0          800         0  Meia Praia         Sala comercial em Avenida Nereu Ramos - Meia Praia - Itapema/SC
+
+### condominio gigante (top5 por R$/m2) ###
+      listing_id  sale_price  usable_area  monthly_condo_fee  yearly_iptu
+8183  2730810537   3150000.0          169          3150000.0          0.0
+5113  2729032524    898000.0           68           898000.0          NaN
+5599  2765550417   2555000.0          131          1690000.0          0.0
+5635  2769325664   1400000.0          115          1400000.0          0.0
+6413  2760453532   1600000.0          198          1600000.0          NaN
+
+### CLASSIFICACAO esquematica (evidencia interna) ###
+Aptos com area < 20 m2: 56  | area > 500 m2: 59
+Aptos com preco/m2 < 1000: 8  | > 20000: 1412
+Apartamento com 0 banheiros: 0  | 0 quartos: 0
+Terrenos area 0: 11  | area<20: 12  | area>20000: 1
+Comerciais area 0: 0

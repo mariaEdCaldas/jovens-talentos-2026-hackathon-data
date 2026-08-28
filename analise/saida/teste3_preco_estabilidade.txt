@@ -1,0 +1,84 @@
+TESTE 3 — Estabilidade/direcao de preco entre capturas
+grupos (listing,date): 59040
+distribuicao de n_capturas: 
+n_cap
+1    25452
+2     7377
+3    26211
+
+### amplitude relativa (max-min)/mediana por n_capturas ###
+          count    mean     std  min  25%     50%     75%     max
+ncap_b                                                           
+1       25452.0  0.0000  0.0000  0.0  0.0  0.0000  0.0000  0.0000
+2        7377.0  0.0297  0.0730  0.0  0.0  0.0000  0.0181  0.9782
+3       26211.0  0.0732  0.1203  0.0  0.0  0.0056  0.1111  2.0000
+
+### variacao % entre min e max (percentis) ###
+ncap_b      
+1       0.50     0.00
+        0.75     0.00
+        0.90     0.00
+        0.99     0.00
+2       0.50     0.00
+        0.75     1.83
+        0.90    11.11
+        0.99    52.22
+3       0.50     0.56
+        0.75    12.00
+        0.90    26.63
+        0.99    67.73
+
+### fração de pares com variacao nula / pequena ###
+ampl_rel==0 (preco constante): 73.55%
+ampl_rel < 0.10 (variacao <10% da mediana): 86.12%
+ampl_rel > 0.25: 3.83%
+ampl_rel > 0.50: 0.48%
+
+### variacao prim->ult (abs e %) ###
+pares com >1 captura: 33588
+direcao da variacao prim->ult:
+dir
+ 0.0    18815
+-1.0    10703
+ 1.0     4070
+% sem mudanca: 56.0%  subiu: 12.1%  caiu: 31.9%
+
+vd_pct percentis (pares que mudaram): 
+0.05   -30.99
+0.25   -15.48
+0.50    -6.25
+0.75     1.21
+0.95    20.00
+
+### segmentacao por intervalo de dias entre capturas (prim->ult) ###
+seg                             
+06/01_para_07/01 (1 dia)     0.0     3721
+                            -1.0     1213
+                             1.0      344
+06/01_para_20/01 (14 dias)   0.0    13776
+                            -1.0     9015
+                             1.0     3537
+07/01_para_20/01 (13 dias)   0.0     1318
+                            -1.0      475
+                             1.0      189
+                              count  mean    std    min   25%  50%  75%     max
+seg                                                                            
+06/01_para_07/01 (1 dia)     5278.0 -1.38   5.71 -41.91  0.00  0.0  0.0   57.76
+06/01_para_20/01 (14 dias)  26328.0 -2.93  13.02 -65.69 -6.25  0.0  0.0  200.00
+07/01_para_20/01 (13 dias)   1982.0 -1.84   9.38 -65.69  0.00  0.0  0.0   80.00
+
+### verificar se 'mesmo_dia' tem mudanca (capturas no mesmo dia p/ mesma noite) ###
+pares mesmo_dia: 0 | dos quais mudaram prim->ult: 0.0%
+(no mesmo dia, uma determinada noite nao costuma ser capturada 2x - ver Teste 1: fatias disjuntas)
+
+### volatilidade por listing ###
+       n_pares  frac_mudou  med_ampl
+count  673.000     673.000   673.000
+mean    49.908       0.420     4.297
+std     20.178       0.331     9.252
+min      3.000       0.000     0.000
+25%     34.000       0.111     0.000
+50%     53.000       0.368     0.000
+75%     66.000       0.706     5.333
+max     90.000       1.000    94.797
+fracao de listings com >=50% das datas mudando: 39.2%

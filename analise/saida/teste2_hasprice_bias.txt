@@ -1,0 +1,226 @@
+TESTE 2 — Vies de selecao has_price
+total listings=4441  has_price=1: 999 (22.49%)  has_price=0: 3442 (77.51%)
+
+### Cobertura por suburb (bairro) ###
+has_price                   0    1   All  cov%
+suburb                                        
+Alto Sao Bento             57    5    62   8.1
+Areal                       4    1     5  20.0
+Canto da Praia             19    9    28  32.1
+Casa Branca                73   15    88  17.0
+Centro                    452  205   657  31.2
+Ilhota                     46   10    56  17.9
+Jardim Praiamar             4    1     5  20.0
+Lameiro                     1    0     1   0.0
+Leopoldo Zarling           17    1    18   5.6
+Meia Praia               2228  632  2860  22.1
+Morretes                  358   83   441  18.8
+Sertao do Trombudo         19    3    22  13.6
+Sertaozinho                15    6    21  28.6
+Tabuleiro dos Oliveiras   109   20   129  15.5
+Varzea                     38    5    43  11.6
+none                        2    3     5  60.0
+All                      3442  999  4441  22.5
+
+### listing_type ###
+has_price        0    1   All  cov%
+listing_type                       
+apartamento   2799  911  3710  24.6
+casa           373   70   443  15.8
+hotel           42    1    43   2.3
+outros         228   17   245   6.9
+All           3442  999  4441  22.5
+
+### suburb ###
+has_price                   0    1   All  cov%
+suburb                                        
+Alto Sao Bento             57    5    62   8.1
+Areal                       4    1     5  20.0
+Canto da Praia             19    9    28  32.1
+Casa Branca                73   15    88  17.0
+Centro                    452  205   657  31.2
+Ilhota                     46   10    56  17.9
+Jardim Praiamar             4    1     5  20.0
+Lameiro                     1    0     1   0.0
+Leopoldo Zarling           17    1    18   5.6
+Meia Praia               2228  632  2860  22.1
+Morretes                  358   83   441  18.8
+Sertao do Trombudo         19    3    22  13.6
+Sertaozinho                15    6    21  28.6
+Tabuleiro dos Oliveiras   109   20   129  15.5
+Varzea                     38    5    43  11.6
+none                        2    3     5  60.0
+All                      3442  999  4441  22.5
+
+  chi2 p-valor=0.0000 (df=15)
+
+### listing_type ###
+has_price        0    1   All  cov%
+listing_type                       
+apartamento   2799  911  3710  24.6
+casa           373   70   443  15.8
+hotel           42    1    43   2.3
+outros         228   17   245   6.9
+All           3442  999  4441  22.5
+
+  chi2 p-valor=0.0000 (df=3)
+
+### bedroomsGrp ###
+has_price       0    1   All  cov%
+bedroomsGrp                       
+1             405  144   549  26.2
+2            1131  351  1482  23.7
+3            1518  404  1922  21.0
+4             291   80   371  21.6
+5+             49   12    61  19.7
+All          3394  991  4385  22.6
+
+  chi2 p-valor=0.0779 (df=4)
+
+### bathGrp ###
+has_price     0    1   All  cov%
+bathGrp                         
+0-1         767  236  1003  23.5
+2          1611  513  2124  24.2
+3           687  179   866  20.7
+4+          321   62   383  16.2
+All        3386  990  4376  22.6
+
+  chi2 p-valor=0.0026 (df=3)
+
+### guestsGrp ###
+has_price     0    1   All  cov%
+guestsGrp                       
+1-4         645  201   846  23.8
+5-6        1213  382  1595  23.9
+7-8        1027  287  1314  21.8
+9+          557  129   686  18.8
+All        3442  999  4441  22.5
+
+  chi2 p-valor=0.0386 (df=3)
+
+### bedsGrp ###
+has_price     0    1   All  cov%
+bedsGrp                         
+1-2         956  264  1220  21.6
+3-4        1753  508  2261  22.5
+5-6         514  165   679  24.3
+7+          161   56   217  25.8
+All        3384  993  4377  22.7
+
+  chi2 p-valor=0.3860 (df=3)
+
+### cleaningGrp ###
+has_price       0    1   All  cov%
+cleaningGrp                       
+1-149         355  136   491  27.7
+150-249       956  428  1384  30.9
+250-499      1199  378  1577  24.0
+500+           39   11    50  22.0
+All          2549  953  3502  27.2
+
+  chi2 p-valor=0.0003 (df=3)
+
+### reviewsGrp ###
+has_price      0    1   All  cov%
+reviewsGrp                       
+1-4         1432   87  1519   5.7
+5-19         380  479   859  55.8
+20-99         95  379   474  80.0
+100+          17   32    49  65.3
+All         1924  977  2901  33.7
+
+  chi2 p-valor=0.0000 (df=3)
+
+### starGrp ###
+has_price       0    1   All  cov%
+starGrp                           
+0 (sem rev)  1518   22  1540   1.4
+<4.5          194   14   208   6.7
+>=4.5        1730  963  2693  35.8
+All          3442  999  4441  22.5
+
+  chi2 p-valor=0.0000 (df=2)
+
+### is_guest_favorite ###
+has_price             0    1   All  cov%
+is_guest_favorite                       
+False              3172  395  3567  11.1
+True                270  604   874  69.1
+All                3442  999  4441  22.5
+
+  chi2 p-valor=0.0000 (df=1)
+
+### is_superhost ###
+has_price        0    1   All  cov%
+is_superhost                       
+False         2984  565  3549  15.9
+True           458  434   892  48.7
+All           3442  999  4441  22.5
+
+  chi2 p-valor=0.0000 (df=1)
+
+### is_professional ###
+has_price           0    1   All  cov%
+is_professional                       
+False            2898  799  3697  21.6
+True              200  189   389  48.6
+All              3098  988  4086  24.2
+
+  chi2 p-valor=0.0000 (df=1)
+
+### can_instant_book ###
+has_price            0    1   All  cov%
+can_instant_book                       
+False             2487  640  3127  20.5
+True               611  348   959  36.3
+All               3098  988  4086  24.2
+
+  chi2 p-valor=0.0000 (df=1)
+
+### is_new_listing ###
+has_price          0    1   All  cov%
+is_new_listing                       
+False           2456  380  2836  13.4
+True             716   15   731   2.1
+All             3172  395  3567  11.1
+
+  chi2 p-valor=0.0000 (df=1)
+
+### is_verified ###
+has_price       0    1   All  cov%
+is_verified                       
+False          29    0    29   0.0
+True         3413  999  4412  22.6
+All          3442  999  4441  22.5
+
+  chi2 p-valor=0.0072 (df=1)
+
+### Variaveis continuas: mediana/mean has_price 0 vs 1 ###
+number_of_bedrooms       med0=     3.000 med1=     2.000 | mean0=       2.525 mean1=       2.453 | MWU p=0.0195
+number_of_bathrooms      med0=     2.000 med1=     2.000 | mean0=       2.173 mean1=       2.080 | MWU p=0.0174
+number_of_beds           med0=     3.000 med1=     3.000 | mean0=       3.411 mean1=       3.545 | MWU p=0.0232
+number_of_guests         med0=     6.000 med1=     6.000 | mean0=       6.675 mean1=       6.503 | MWU p=0.0078
+cleaning_fee             med0=   230.000 med1=   250.000 | mean0=     200.257 mean1=     245.464 | MWU p=0.0000
+number_of_reviews        med0=     1.000 med1=    16.000 | mean0=       3.770 mean1=      27.081 | MWU p=0.0000
+star_rating              med0=     4.500 med1=     4.930 | mean0=       2.697 mean1=       4.790 | MWU p=0.0000
+picture_count            med0=     8.000 med1=    21.000 | mean0=      11.125 mean1=      23.517 | MWU p=0.0000
+min_nights               med0=     0.000 med1=     0.000 | mean0=       0.000 mean1=       0.000 | MWU p=nan
+years_host               med0=     2.000 med1=     5.000 | mean0=       2.939 mean1=       4.585 | MWU p=0.0000
+months_host              med0=     2.000 med1=     2.000 | mean0=       3.574 mean1=       3.586 | MWU p=0.8193
+star_rating_host         med0=     4.830 med1=     4.900 | mean0=       3.622 mean1=       4.819 | MWU p=0.0000
+number_of_reviews_host   med0=     3.000 med1=    40.000 | mean0=      91.540 mean1=    4736.589 | MWU p=0.0000
+
+### Owners: concentracao de listings no price por owner ###
+distribuicao cobertura por tamanho de owner (media de pct_price):
+       count   mean
+tam                
+1       2548  0.215
+2        309  0.206
+4        150  0.221
+5-9       27  0.217
+10-19     13  0.072
+20+       10  0.267
+
+owners com TODAS listas no price vs NENHUMA:
+todas price: 593  nenhuma price: 2319

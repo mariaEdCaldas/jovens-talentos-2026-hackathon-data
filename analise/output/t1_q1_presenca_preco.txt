@@ -1,0 +1,127 @@
+====================================================================================================
+Q1 - POR QUE APENAS 1005 DOS 4441 LISTINGS TEM PRECO?
+====================================================================================================
+com preco: 999 | sem preco: 3442 | total: 4441
+
+-- H1a: listing_type x tem preco --
+has_price     False  True   All
+listing_type                   
+apartamento    2799   911  3710
+casa            373    70   443
+hotel            42     1    43
+outros          228    17   245
+All            3442   999  4441
+chi2=64.5 p=6.56e-14 (n>=5 em cada celula recomendado)
+
+-- H1b: tem reviews (number_of_reviews>0) x tem preco --
+has_price    False  True   All
+has_reviews                   
+False         1518    22  1540
+True          1924   977  2901
+All           3442   999  4441
+chi2=598.2 p=4.03e-132
+
+-- H1c: numero de reviews (mediana/descritiva) por grupo --
+            count       mean        std  min   25%   50%   75%    max
+has_price                                                            
+False      3442.0   3.769611  13.761242  0.0   0.0   1.0   3.0  334.0
+True        999.0  27.081081  37.678825  0.0  10.0  16.0  32.0  504.0
+Mann-Whitney U=3169170 p=0.00e+00
+
+Kendall tau(reviews, has_price) = 0.542 (p=0.00e+00)
+
+-- H1d: flags profissionalismo --
+--- is_professional ---
+has_price        False  True   All
+is_professional                   
+False             2898   799  3697
+True               200   189   389
+All               3098   988  4086
+chi2=230.1 p=1.06e-50
+
+--- is_guest_favorite ---
+has_price          False  True   All
+is_guest_favorite                   
+False               3172   395  3567
+True                 270   604   874
+All                 3442   999  4441
+chi2=1352.7 p=3.91e-296
+
+--- can_instant_book ---
+has_price         False  True   All
+can_instant_book                   
+False              2487   640  3127
+True                611   348   959
+All                3098   988  4086
+chi2=188.6 p=1.10e-41
+
+--- is_superhost (do host do listing) ---
+has_price     False  True   All
+is_superhost                   
+False          2984   565  3549
+True            458   434   892
+All            3442   999  4441
+chi2=436.2 p=7.11e-97
+
+-- H1e: bairro (suburb_norm do mesh) x tem preco --
+has_price                False  True   All
+suburb_norm                               
+Alto São Bento              57     5    62
+Areal                        4     1     5
+Canto da Praia              19     9    28
+Casa Branca                 73    15    88
+Centro                     452   205   657
+Ilhota                      46    10    56
+Jardim Praiamar              4     1     5
+Lameiro                      1     0     1
+Leopoldo Zarling            17     1    18
+Meia Praia                2228   632  2860
+Morretes                   358    83   441
+Sertão do Trombudo          19     3    22
+Sertãozinho                 15     6    21
+Tabuleiro dos Oliveiras    109    20   129
+Várzea                      38     5    43
+All                       3440   996  4436
+chi2=54.7 p=9.92e-07
+- share com preco por bairro (taxa de cobertura):
+                         sum  count  share
+suburb_norm                               
+Meia Praia               632   2860  0.221
+Centro                   205    657  0.312
+Morretes                  83    441  0.188
+Tabuleiro dos Oliveiras   20    129  0.155
+Casa Branca               15     88  0.170
+Alto São Bento             5     62  0.081
+Ilhota                    10     56  0.179
+Várzea                     5     43  0.116
+Canto da Praia             9     28  0.321
+Sertão do Trombudo         3     22  0.136
+Sertãozinho                6     21  0.286
+Leopoldo Zarling           1     18  0.056
+Areal                      1      5  0.200
+Jardim Praiamar            1      5  0.200
+Lameiro                    0      1  0.000
+
+-- H1f: ano de primeiro rastreio no mesh x tem preco --
+has_price   False  True   All
+first_year                   
+2021          234   178   412
+2022          186    94   280
+2023          655   184   839
+2024         2046   496  2542
+2025          313    41   354
+2026            8     6    14
+All          3442   999  4441
+Mann-Whitney (mesh_first_seen) p=1.76e-36
+
+-- H1g (contexto): years_host/media reviews por ano --
+           years_host  months_host
+has_price                         
+False             2.0          2.0
+True              5.0          2.0
+
+-- Resumo fatos Q1 --
+(1) Cobertura de price = 1005/4441 = 22.5%
+(2) Diferencas de composicao entre grupos (ver tabelas crosstab acima).
+(3) Importante: cobertura por bairro varia (ver tabela share).
+

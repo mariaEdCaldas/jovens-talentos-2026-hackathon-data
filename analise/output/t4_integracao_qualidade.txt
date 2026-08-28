@@ -1,0 +1,79 @@
+====================================================================================================
+T4 - VALIDACAO DE INTEGRACAO E QUALIDADE
+====================================================================================================
+-- (a) VivaReal - duplicatas de listing_id --
+linhas envolvidas em duplicata: 72
+listing_ids duplicados distintos: 36
+-> dessas, grupos onde todas as colunas sao identicas (dup EXATA) e onde divergem:
+distribuicao (n linhas, linhas identicas):
+n  todos_identicos
+2  False               1
+   True               35
+listing_ids com duplicata EXATA (todas colunas iguais): 35
+listing_ids com divergencia entre as linhas: 1
+-> Os 35 duplicados 'exatos' provavelmente = mesmo anuncio presente 2x
+   no arquivo (arte fatual); manter 1. Ha 1 caso (2655470871) com
+   divergencia (pode ser mesmo imovel ofertado por 2 anuncios).
+
+-- (b) Hosts - fan-out por owner_id --
+owners distintos: 3057
+distribuicao do numero de linhas por owner:
+1     2548
+2      309
+3       89
+4       43
+5       18
+6       11
+7        6
+8        4
+9        3
+10       3
+11       4
+12       1
+linhas que precisariam de dedup p/ owner-unico: 509 owners
+
+-- (c) Normalizacao de bairro (Airbnb mesh vs VivaReal) --
+bairros mesh (norm): 15 ['Alto São Bento', 'Areal', 'Canto da Praia', 'Casa Branca', 'Centro', 'Ilhota', 'Jardim Praiamar', 'Lameiro', 'Leopoldo Zarling', 'Meia Praia', 'Morretes', 'Sertão do Trombudo', 'Sertãozinho', 'Tabuleiro dos Oliveiras', 'Várzea']
+bairros viv (norm): 17 ['Alto São Bento', 'Andorinha', 'Canto da Praia', 'Casa Branca', 'Castelo Branco', 'Centro', 'Estreito', 'Ilhota', 'Itapema', 'Jardim Praiamar', 'Meia Praia', 'Morretes', 'Ocean Tower', 'Sertão do Trombudo', 'Sertãozinho', 'Tabuleiro dos Oliveiras', 'Várzea']
+bairros com correspondencia: 12 ['Alto São Bento', 'Canto da Praia', 'Casa Branca', 'Centro', 'Ilhota', 'Jardim Praiamar', 'Meia Praia', 'Morretes', 'Sertão do Trombudo', 'Sertãozinho', 'Tabuleiro dos Oliveiras', 'Várzea']
+bairros SOMENTE mesh (sem venda VivaReal): ['Areal', 'Lameiro', 'Leopoldo Zarling']
+bairros SOMENTE viv (sem oferta Airbnb/mesh): ['Andorinha', 'Castelo Branco', 'Estreito', 'Itapema', 'Ocean Tower']
+
+linhas VivaReal em bairros sem oferta Airbnb (sem par p/ integracao): 1398 = 16.8%
+suburb_norm
+Andorinha         782
+Castelo Branco    510
+Estreito            5
+Itapema             2
+Ocean Tower         1
+linhas Airbnb (mesh) em bairros sem oferta VivaReal: 29 = 0.7%
+suburb_norm
+Leopoldo Zarling    18
+Areal                5
+Lameiro              1
+
+-- (d) Price - listing_ids sem Details/Mesh (orfaos) --
+total orfaos: 6
+linhas de price orfas: 509 = 0.43% do price
+> esses nao podem ser agregados a caracteristicas/loc do listing.
+
+-- (e) Details: coordenadas e min_nights --
+latitude==0 e longitude==0: 4441 de 4441
+min_nights == 0 em todas: 1
+
+-- (f) mesma coordenada (predio) compartilhada por varios listings --
+coords unicas: 3988
+coords compartilhadas por 2+ listings: 231
+max listings numa mesma coord: 25
+1     3757
+2      134
+3       54
+4       24
+5        8
+6        2
+7        3
+9        1
+10       1
+12       1
+> indica unidades distintas no mesmo edificio (permite analise intra-predio).
+

@@ -1,0 +1,24 @@
+TESTE 11 — Capacidade analitica (fatos de apoio)
+
+### Ocupacao/receita: existe coluna? ###
+Details colunas de ocupacao/reserva/receita: ['can_instant_book']
+Price colunas: ['airbnb_listing_id', 'date', 'price', 'aquisition_date']
+VivaReal posui preco de ALUGUEL (rental_price)? n nao-nulo: 2 de 8329
+details min_nights valores unicos: [0] (impossivel usar para politica de estadia)
+
+### O que temos = preco anunciado por noite ###
+Distribuicao do preco por noite por mes de estadia (jan-abr/2025):
+         count  median   mean
+mes                          
+2025-01  10057   800.0  943.3
+2025-02  34864   700.0  796.2
+2025-03  53828   573.6  669.8
+2025-04  20090   480.0  569.6
+
+preco/noite percentis (toda a amostra):
+0.25    450.0
+0.50    607.0
+0.75    842.0
+
+### Duracao do periodo coberto ###
+primeira data de estadia: 2025-01-06 | ultima: 2025-04-20 (~3,5 meses de calendario)

@@ -1,0 +1,119 @@
+====================================================================================================
+TESTE 1 (AUDITADO) - Granularidade temporal de Price
+====================================================================================================
+linhas=118839 listings=1005 datas_estadia=105
+aquisition_date sem hora? True | exemplo: 2025-01-07 13:25:06.000
+
+### B.1 - Dias-calendario e timestamps por dia ###
+cal
+2025-01-06    37825
+2025-01-07    38991
+2025-01-20    42023
+timestamps distintos por dia:
+cal
+2025-01-06    1364
+2025-01-07    1364
+2025-01-20    1444
+faixa horaria por dia:
+                           min                 max  dur_h
+cal                                                      
+2025-01-06 2025-01-06 13:22:07 2025-01-06 15:00:53  1.646
+2025-01-07 2025-01-07 13:22:38 2025-01-07 15:00:22  1.629
+2025-01-20 2025-01-20 13:21:22 2025-01-20 15:07:47  1.774
+
+### C.1 - Listings unicos por timestamp ###
+count    4172.00
+mean        1.20
+std         0.49
+min         1.00
+25%         1.00
+50%         1.00
+75%         1.00
+max         6.00
+linhas por timestamp:
+count    4172.00
+mean       28.48
+std        29.71
+min         1.00
+25%         4.00
+50%        15.00
+75%        49.25
+max       229.00
+n timestamps=4172 (media de pares listing,date por ts: 28.5)
+
+### D.1 - Janela de datas de estadia coberta por cada timestamp ###
+tamanho da janela (dias) por captura:
+count    4997.00
+mean       30.23
+std        29.45
+min         1.00
+25%         3.00
+50%        18.00
+75%        57.00
+max        91.00
+histograma (top20):
+tam
+1     607
+2     426
+3     260
+4     225
+5     168
+6     116
+7     105
+8      85
+9      57
+10     50
+11     50
+12     60
+13     53
+14     58
+15     48
+16     54
+17     43
+18     37
+19     49
+20     51
+
+### D.2 - Particionamento: janelas consecutivas do mesmo (listing, dia) ###
+(listing, dia) com multiplos ts (grupos analisados): 1303
+pares de janelas consecutivas analisados: 2691
+  contiguas (end_i + 1 == start_j):  2387 (88.7%)
+  com GAP entre janelas:             304 (11.3%)
+  com OVERLAP:                       0 (0.0%)
+(listing, dia) onde NENHUM par viola ordenacao (janelas crescem): 1303/1303
+(listing, dia) cuja uniao das janelas forma bloco contiguo: 1017/1303
+
+### E.1 - Espacamento temporal entre timestamps DISTINTOS consecutivos do mesmo (listing,dia) ###
+n gaps (ts distintos consecutivos do mesmo listing+dia): 2691
+gap em minutos:
+count    2691.0
+mean       19.2
+std        12.3
+min         0.0
+25%        10.5
+50%        17.8
+75%        24.2
+max        84.8
+gaps <=1s (aparente re-agrupamento): 0.1% | gaps entre 5 e 25 min: 67.7%
+
+### F.1 - A janela avanca com o tempo da captura? (correlacao por (listing,dia)) ###
+(listing,dia) com >=2 ts: 1303
+correlacao Spearman ts->min_date : mediana 1.000 | mean 1.000 | frac=1.0: 47.0%
+
+### G.1 - Evidencia de que cada captura e janela parcial ###
+tamanho da janela por captura: Q10=1 Q25=3 Q50=18 Q75=57 Q90=77
+(janela de 1 dia foi a mais frequente -> fatias pequenas; ver histograma em D.1)
+
+### G.2 - date é futura em relacao a captura? (data de estadia) ###
+linhas onde date >= data_da_captura (dia): 100.00%
+linhas onde date <  data_da_captura: (inverso)
+  = 0.00%  | ver exemplos:
+NENHUM caso (date sempre >= dia da captura)
+
+### G.3 - variacao por mes de estadia (sazonalidade de calendario) ###
+         count  median   mean
+mes                          
+2025-01  10057   800.0  943.3
+2025-02  34864   700.0  796.2
+2025-03  53828   573.6  669.8
+2025-04  20090   480.0  569.6

@@ -1,0 +1,90 @@
+====================================================================================================
+Q4 - REVIEWS COMO PROXY DE DEMANDA
+====================================================================================================
+Fato: variable number_of_reviews = contador ACUMULADO (stock).
+
+-- a) share de anuncios SEM reviews --
+anuncios com 0 reviews: 1540 de 4441 = 34.7%
+distribuicao de reviews:
+count    4441.000000
+mean        9.013510
+std        23.677845
+min         0.000000
+25%         0.000000
+50%         2.000000
+75%         8.000000
+max       504.000000
+quantis 90/99/max: {0.5: 2.0, 0.9: 24.0, 0.99: 106.0, 1.0: 504.0}
+
+-- b) reviews correlacionam com idade (acumulo ao longo do tempo) --
+mediana de reviews por anos_host:
+           count  median       mean
+years_bin                          
+(0, 1]       709     1.0   3.806770
+(1, 2]       486     2.0   6.189300
+(2, 3]       355     5.0  10.560563
+(3, 4]       281     5.0  10.825623
+(4, 5]       524     2.0  12.125954
+(5, 8]      1029     4.0  17.180758
+(8, 20]      136     3.5  15.897059
+Kendall tau(reviews, years_host) = 0.243 (p=3.45e-103)
+> Se reviews sobem com a idade, sao proxy de ACUMULO historico,
+> nao de demanda corrente/nivel de ocupacao atual.
+
+-- c) associacao reviews x preco (apenas 999 listings com preco) --
+Kendall tau(reviews, preco_mdn/noite) = -0.118 (p=3.92e-08)
+preco_mdn mediano por faixa de reviews:
+       count  median         mean
+rbin                             
+0         22   942.5  1196.950218
+1-5       87   644.0   784.663314
+6-15     364   581.5   696.378103
+16-40    357   520.0   589.170042
+40+      169   531.0   655.777441
+> Assoc. e so correlacional; preco alto pode reduzir reservas (endogeneidade).
+
+-- d) reviews < hospedagens (taxa de review <100%) --
+Fato estrutural: revisoes sao escritas por apenas parte dos hospedes;
+logo number_of_reviews SUBESTIMA o numero de hospedagens realizadas.
+Nao ha no dataset o numero real de reservas; nao podemos quantificar a taxa.
+
+====================================================================================================
+Q5 - OBSERVACAO DE OCUPACAO/RECEITA vs POTENCIAL DE MERCADO
+====================================================================================================
+Fato: NENHUMA coluna no dataset registra reservas realizadas, dias
+ocupados ou ocupacao. Campos de preco = valor ANUNCIADO por noite.
+
+-- a) campos relacionados a receita/disponibilidade existentes --
+Price cols: ['date', 'aquisition_date']
+Details cols de reviews/avaliacao (proxy historico, nao ocupacao): ['number_of_reviews', 'star_rating', 'accuracy_rating', 'checkin_rating', 'cleanliness_rating', 'communication_rating', 'location_rating', 'value_rating', 'has_reviews']
+
+-- b) sinal fraco/ambiguo: cobertura do calendario de estadia por imovel --
+Janela de estadia observavel: 2025-01-06 a 2025-04-20 (105 datas).
+count    1005.000000
+mean       58.746269
+std        23.283638
+min         2.000000
+25%        42.000000
+50%        62.000000
+75%        77.000000
+max       105.000000
+Imoveis cobrindo 105 datas (calendario completo): 1 = 0.1%
+Imoveis cobrindo < 50 datas: 348 = 34.6%
+> Datas ausentes podem indicar (i) nao disponivel/bloqueado, (ii) calendario
+> nao preenchido, ou (iii) imovel sem preco naquela captura -> AMBIGUO.
+> Portanto NAO da para tratar 'data sem preco' como 'data ocupada'.
+
+-- c) VivaReal: aluguel como benchmark de mercado --
+rental_price preenchido em: 2 de 8329 = 0.0%
+rental_price is null: 8327 de 8329 = 100.0%
+> Sem serie de aluguel no VivaReal, nao ha como fazer benchmark de
+> rendimento de locacao tradicional com os dados fornecidos.
+
+-- d) conclusao Q5 (fatos vs inferencia) --
+FATO: nao observamos noches ocupadas. Assim, receita realizada = 
+      preco_noite x noches_ocupadas, e noches_ocupadas NAO esta nos dados.
+INFERENCIA metodologica defensavel: usar POTENCIAL de mercado java que
+      receita só seria calculada sob hipotese explicita de ocupacao.
+Hipoteses que exigiriam dados ausentes (ocupacao real, taxa de revisao,
+      sazonalidade anual) e nao podem ser validadas aqui.
+

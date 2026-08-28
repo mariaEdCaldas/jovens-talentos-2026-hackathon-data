@@ -1,0 +1,83 @@
+====================================================================================================
+Q2 - O QUE E AQUISITION_DATE? TRUE GRANULARITY DAS CAPTURAS
+====================================================================================================
+total de linhas: 118839
+distinct listing: 1005
+distinct timestamps de captura (aquisition_date): 4172
+distinct DIAS-calendario de captura: 3
+
+linhas por dia de captura:
+cap_day
+2025-01-06    37825
+2025-01-07    38991
+2025-01-20    42023
+
+-- dias de captura por listing (1, 2 ou 3 dias) --
+cap_day
+1    332
+2     45
+3    628
+share com 3 dias de captura: 62.5%
+
+-- capturas (linhas) por listing: descritiva --
+count    1005.000000
+mean        4.972139
+std         3.134314
+min         1.000000
+25%         2.000000
+50%         5.000000
+75%         7.000000
+max        19.000000
+
+====================================================================================================
+Q3 - REPRESENTACAO DE MULTIPLAS OBSERVACOES DE PRECO
+====================================================================================================
+pares (listing, stay_date) totais (com qualquer captura): 59040
+pares com captura em 1 dia: 25452
+pares com captura em 2 dias: 7377
+pares com captura em 3 dias: 26211
+
+-- pares com >=2 capturas: 33588 --
+(usando 1a captura day=2025-01-06 vs ultima captura day=2025-01-20)
+pares com preco tanto na 1a quanto na ultima captura: 26328
+pares onde o preco MUDOU entre 1a e ultima captura: 12552 (47.7%)
+pares onde o preco NAO mudou: 13776
+variacao relativa (ultima/1a - 1):
+count    26328.000000
+mean        -0.029276
+std          0.130240
+min         -0.656898
+25%         -0.062500
+50%          0.000000
+75%          0.000000
+max          2.000000
+quantis da variacao absoluta (R$):
+0.50      0.00000
+0.75     64.50000
+0.90    156.00000
+0.95    248.79406
+0.99    457.50000
+
+-- Comparacao 3 representacoes por (listing, stay_date) --
+total pares: 59040
+pares onde last != first: 14773 (25.0%)
+pares onde last != median: 12917 (21.9%)
+|last-first| em R$  : {'count': 59040.0, 'mean': 25.564815560298104, 'std': 73.32645047538792, 'min': 0.0, '25%': 0.0, '50%': 0.0, '75%': 0.16669999999999163, 'max': 1300.0}
+|last-median| em R$ : {'count': 59040.0, 'mean': 19.853925226880083, 'std': 62.71819324909769, 'min': 0.0, '25%': 0.0, '50%': 0.0, '75%': 0.0, 'max': 1300.0}
+
+MEDIANA do preco por (listing, stay_date) — stat final:
+(esta eh a base sugerida para 'preco por noite' em analise futura)
+  ultima=(max cap) representaria o preco 'atual' ao fim do rastreio;
+  mediana entre capturas reduziria ruido de captura sequencial.
+
+-- Agregado ao nivel de IMOVEL: preco medio por noite (ultima vs mediana) --
+count    1005.000000
+mean       14.369603
+std        32.522020
+min         0.000000
+25%         0.000000
+50%         0.902778
+75%        12.965116
+max       340.651515
+fracao de imoveis com |diff|>R$50: 9.1%
+
