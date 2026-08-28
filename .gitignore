@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Variáveis de ambiente / secrets
+.env
+.env.*
+!.env.example
+
+# IDEs / editores
+.idea/
+.vscode/
+*.local
+
+# Dependências
+node_modules/
+
+# Sistema
+Thumbs.db
+.DS_Store
+
+# Configuração local de credenciais (NUNCA versionar)
+opencode.json
+
+# Logs de execução (derivados do console; não são outputs primários)
+analise/saida/*_console.txt
+analise/saida/audit_console.txt

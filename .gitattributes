@@ -1,0 +1,16 @@
+* text=auto
+
+# Datasets do desafio: normalizar EOL para LF no index (blob original é LF), preservando o arquivo físico
+data/*.csv text eol=lf
+
+# Arquivos de texto do projeto
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+
+# CSVs de saída (resultados gerados) — normais a texto do projeto
+analise/saida/*.csv text eol=crlf
+
+# Binários
+*.png binary
+*.pyc binary
